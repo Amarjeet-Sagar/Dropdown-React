@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+import Dropdown from "./components/Dropdown/Dropdown";
+import DropdownItem from "./components/DropdownItem/DropdownItem";
+import LoginForm from "./components/LoginForm/LoginForm";
+
+const App = () => {
+  const items = [1, 2, 3, 4, 5, 6, 7, 8];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="content">
+        <Dropdown
+          buttonText="Dropdown button"
+          content={
+            <>
+              {items.map((item, id) => (
+                <DropdownItem key={id}>{`Item ${item}`}</DropdownItem>
+              ))}
+            </>
+          }
+        />
+        <Dropdown buttonText="Login" content={<LoginForm />} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

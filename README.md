@@ -1,1 +1,1 @@
-Hosted On open https://kajal-ecomm.netlify.app/ to view it in your browser
+Hosted On open https://amarjeet-sagar.github.io/Dropdown-React/ to view it in your browser
